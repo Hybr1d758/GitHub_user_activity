@@ -2,7 +2,7 @@ import requests
 import argparse
 
 def fetch_user_activity(username):
-    url = f"https://api.github.com/users/Hybr1d758/events"
+    url = f"https://api.github.com/users/{username}/events"
     response = requests.get(url)
     if response.status_code == 200:
         return response.json()
